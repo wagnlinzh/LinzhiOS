@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  
+
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- semantic CSS -->
+  <link href="dist/css/semantic.min.css" rel="stylesheet">
+
+  <!-- Add fancyBox main  CSS files -->
+  <link rel="stylesheet" type="text/css" href="dist/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+ 
+
+  <!--DIY-->
+
+  <link href="dist/css/theme.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="page-header">
+          <h1>Weeks</h1>
+        </div>
+        <!-- 课程格子 -->
+        <div class="ui celled grid"><!-- 7row 8column -->
+          <!-- 第一行，thead --><!-- 星期几 -->
+          <div class="eight column row" id="head">
+            <div class="column"> </div>
+            <div class="column">Monday</div>
+            <div class="column">Tuesday</div>
+            <div class="column">Wenday</div>
+            <div class="column">Thursday</div>
+            <div class="column">Friday</div>
+            <div class="column">Saturday</div>
+            <div class="column">Sunday</div>
+          </div>
+          
+          <!-- 第一节课 --><!-- tbody 第一行 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Morning</div>
+            
+            <div class="column" id="1_1"><a href="class.html" class="fancybox fancybox.iframe">
+              
+              <div class="ui blue basic button">尚未选课</div>
+              
+
+            </a></div>
+            
+            <div class="column" id="2_1"></div>
+
+            <div class="column"></div>
+
+            <div class="column">概率论</div>
+            <div class="column">政治</div>
+            <div class="column">高等数学</div>
+            <div class="column">线性代数</div>
+          </div>
+
+          <!-- 上午 第二节课 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Morning </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">数据结构 </div>
+            <div class="column">计算机组成原理</div>
+            <div class="column">计算机网络</div>  
+          </div>
+
+          <!--下午 第一节课 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Afternoon </div>
+            <div class="column">高等数学</div>
+            <div class="column">线性代数</div>
+            <div class="column">概率论</div>
+            <div class="column">政治</div>
+            <div class="column">数据结构 </div>
+            <div class="column">计算机组成原理</div>
+            <div class="column">计算机网络</div>
+          </div>
+
+
+          <!--下午 第二节课 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Afternoon </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+
+          <!-- 晚上 第一节课 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Evening </div>
+            <div class="column">高等数学</div>
+            <div class="column">线性代数</div>
+            <div class="column">概率论</div>
+            <div class="column">政治</div>
+            <div class="column">数据结构 </div>
+            <div class="column">计算机组成原理</div>
+            <div class="column">计算机网络</div>
+          </div>
+
+          
+          <!-- 晚上 第二节课 -->
+          <div class="eight column row">
+            <div class="column"><i class="tag icon"></i>Evening </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>	
+
+
+  <!--add jquery-->
+    <script src="dist/js/jquery-2.1.3.js"></script>
+
+
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="dist/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+
+    <!-- Add fancyBox main JS -->
+    <script type="text/javascript" src="dist/fancybox/source/jquery.fancybox.js?v=2.1.5">
+    </script>
+
+    <script type="text/javascript">
+    /*对空的格子，填入尚未选课按钮*/
+      $(function(){
+        for (var i = 1; i < 56; i++) {
+          var $unit=$(".column:not('.eight.column.row'):eq("+i+")");
+          if ($unit.text()=="") {
+              $unit.append("<a href=\"class.html\" class=\"fancybox fancybox.iframe\"><div class=\"ui blue basic button\">尚未选课</div></a>");
+          };
+        };
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.fancybox').fancybox();
+
+
+
+      });
+
+      $submitBtn.click(function(){
+        setTimeout(function(){
+          $.fancybox.close()},2000);
+      })
+
+      
+    </script>
+    <!-- 找class.html的内容 -->
+    <script type="text/javascript">
+
+
+    </script>
+
+</body>
+</html>
